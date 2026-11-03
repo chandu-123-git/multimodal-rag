@@ -1,0 +1,206 @@
+(.venv) PS C:\Users\admin\Desktop\code practice\multi_modal_rag> python multimodal_rag.py
+PDF pages: 13
+Pages with extracted text: 13
+Total chunks: 37
+
+Sample chunk:
+12 Steps to Become a
+Generative AI Engineer
+Complete Roadmap
+URL https://www.instagram.com/datasciencebrain
+Introduction
+Generative AI is revolutionizing technology and creating unprecedented career
+opportunities. This comprehensive roadmap guides you through 12 essential steps
+to become a production-ready GenAI Engineer. Each phase builds upon the
+previous one, creating a solid foundation for building real-world AI applications.
+
+Sample metadata:
+{'source': 'genai_engineer_roadmap.pdf', 'page': 1, 'modality': 'pdf'}
+
+Image processing completed.
+
+Generated image description:
+Based on the provided RAG (Retrieval-Augmented Generation) architecture diagram, here is a structured explanation of the end-to-end pipeline.
+
+---
+
+### 1. Main Components Shown in the Diagram
+
+The architecture is divided into two main phases:
+
+**Phase 1: Indexing Phase (Prepare the knowledge base — Run once)**
+*   **Source Documents:** Raw input files (PDF, TXT, DOC, etc.).
+*   **Document Loader:** Extracts text from the source documents.
+*   **Text Splitter:** Splits the extracted text into smaller, manageable chunks.
+*   **Embedding Model:** Converts text chunks into numerical vectors (embeddings).
+*   **Vector Store:** A database that stores embeddings, text chunks, and metadata (e.g., source file, page number).
+
+**Phase 2: Retrieval & Generation Phase (Answer a user question — Runs for each question)**
+*   **User Question:** The input query from the user (e.g., *"What is RAG?"*).
+*   **Query Embedding:** Converts the user's question into a vector.
+*   **Vector Store (Retrieval mechanism):** Finds the most relevant chunks using vector similarity.
+*   **Relevant Chunks:** The top-K most relevant chunks retrieved along with their metadata.
+*   **Build Prompt:** Combines the user question and the retrieved chunks into a prompt.
+*   **LLM (e.g., Gemini):** Generates an answer using the provided context.
+*   **Grounded Answer:** The final output containing the answer with source references (document, page).
+
+---
+
+### 2. The Indexing Process
+
+The indexing phase prepares the knowledge base and runs once:
+1.  **Source Documents** (PDF, TXT, DOC, etc.) are fed into the **Document Loader**, which extracts the raw text.
+2.  The extracted text moves to the **Text Splitter**, which breaks it down into **smaller chunks**.
+3.  These smaller chunks pass through the **Embedding Model**, which converts the text into **vectors (embeddings)**.
+4.  Finally, the vectors, chunks, and their metadata (such as source and page numbers) are stored in the **Vector Store**.
+
+---
+
+### 3. The Retrieval and Generation Process
+
+This phase runs dynamically for each user question:
+1.  A **User Question** (e.g., *"What is RAG?"*) is processed by the **Query Embedding** component, which converts the question into a vector.
+2.  Using **Similarity Search**, the system queries the **Vector Store** to find the most relevant chunks based on vector similarity.
+3.  The system retrieves the **Top-K Relevant Chunks** (along with their metadata).
+4.  In the **Build Prompt** step, the user question and the retrieved chunks are combined into a structured prompt.
+5.  An **LLM** (such as Gemini) processes this prompt and generates an answer using the provided context.
+6.  The output is delivered as a **Grounded Answer** complete with source references (e.g., document name and page).
+
+---
+
+### 4. How the Components Work Together
+
+The two phases connect to form a cohesive pipeline:
+*   The **Indexing Phase** establishes a searchable knowledge base offline by ingesting documents, breaking them into chunks, embedding them, and saving them in the **Vector Store**.
+*   The **Retrieval & Generation Phase** leverages this stored knowledge online in real-time. When a user asks a question, the query is embedded and matched against the **Vector Store** via **Similarity Search**. 
+*   The retrieved context is merged with the user question in the **Build Prompt** stage, supplying the **LLM** with factual reference material so it can generate an accurate, **Grounded Answer** with citations.
+
+Image metadata:
+{'source': 'rag_architecture.png', 'modality': 'image', 'image_path': 'C:\\Users\\admin\\Desktop\\code practice\\multi_modal_rag\\data\\rag_architecture.png'}
+
+Video frame extraction completed.
+Video duration: 9.96 seconds
+Frames extracted: 10
+
+Extracted frame details:
+Timestamp: 0.0s | File: frame_000000.jpg
+Timestamp: 1.0s | File: frame_001000.jpg
+Timestamp: 2.0s | File: frame_002000.jpg
+Timestamp: 3.0s | File: frame_003000.jpg
+Timestamp: 4.0s | File: frame_004000.jpg
+Timestamp: 5.0s | File: frame_005000.jpg
+Timestamp: 6.0s | File: frame_006000.jpg
+Timestamp: 7.0s | File: frame_007000.jpg
+Timestamp: 8.0s | File: frame_008000.jpg
+Timestamp: 9.0s | File: frame_009000.jpg
+
+Frame processed: frame_000000.jpg (0.0s)
+Description: A white document sheet with the title "Large Document" and four paragraphs of illegible text is centered on a white background.
+
+Frame processed: frame_001000.jpg (1.0s)
+Description: A slide with the heading "What is Chunking in RAG?" features a central graphic of a document titled "Large Document" enclosed in a light green border. The document contains multiple paragraphs of placeholder text (lorem ipsum style) to visually demonstrate the concept of dividing large documents into smaller segments.
+
+Frame processed: frame_002000.jpg (2.0s)
+Description: A video frame showing a slide with the title "What is Chunking in RAG?" at the top. Below the title is an illustration of a "Large Document" inside a green-bordered box, filled with blocks of garbled text representing paragraphs.
+
+Frame processed: frame_003000.jpg (3.0s)
+Description: A video frame featuring the title "What is Chunking in RAG?" at the top. Below the title, there is an illustration of a document labeled "Large Document" inside a light green bounding box with corner guides, containing several paragraphs of stylized, unreadable text.
+
+Frame processed: frame_004000.jpg (4.0s)
+Description: A video frame with a white background showing the title "What is Chunking in RAG?" at the top. Below the title is a graphic depicting a "Large Document" divided into four smaller sections, or chunks, by green vertical and horizontal dividing lines, illustrating the concept of document chunking.
+
+Frame processed: frame_005000.jpg (5.0s)
+Description: A video frame showing a presentation slide with the title "What is Chunking in RAG?". Below the title are four rectangular blocks labeled "Chunk 1", "Chunk 2", "Chunk 3", and "Chunk 4", arranged in a 2x2 grid. Each block contains paragraphs of gibberish text with a slightly blurred appearance, illustrating the concept of dividing large documents into smaller pieces.
+
+Frame processed: frame_006000.jpg (6.0s)
+Description: A screenshot of a presentation slide titled "What is Chunking in RAG?". Below the main heading, there are four white rectangular cards arranged in a 2x2 grid, labeled "Chunk 1", "Chunk 2", "Chunk 3", and "Chunk 4". Each card contains paragraphs of placeholder or stylized text describing the concept of dividing documents into manageable pieces.
+
+Frame processed: frame_007000.jpg (7.0s)
+Description: A video frame with a white background, featuring a presentation slide titled "What is Chunking in RAG?". Below the title, there is a list of four chunking strategies, each with a green numbered circle: "1. Fixed-Size Chunking", "2. Recursive Chunking", "3. Token-Based Chunking", and "4. Structure-Aware Chunking". At the bottom of the frame, a caption reads, "Choose the right strategy to create meaningful chunks."
+
+Frame processed: frame_008000.jpg (8.0s)
+Description: A slide titled "What is Chunking in RAG?" lists four chunking strategies: "1. Fixed-Size Chunking", "2. Recursive Chunking", "3. Token-Based Chunking", and "4. Structure-Aware Chunking". Below the list, the text reads: "Choose the right strategy to create meaningful chunks."
+
+Frame processed: frame_009000.jpg (9.0s)
+Description: A video frame showing a presentation slide titled "What is Chunking in RAG?" in dark green text at the top center. Below the title, a numbered list from 1 to 4 is displayed vertically, with each number enclosed in a green circle. The list items are:
+1. Fixed-Size Chunking
+2. Recursive Chunking
+3. Token-Based Chunking
+4. Structure-Aware Chunking
+
+At the bottom center, a final sentence reads: "Choose the right strategy to create meaningful chunks." The background is plain white.
+
+Video frame description completed.
+Total frames described: 10
+
+Audio extraction completed.
+Audio file: rag_chunking_demo.wav
+Duration: 10.08 seconds
+Sample rate: 16000 Hz
+Channels: 1
+Sample width: 16-bit
+File size: 315.00 KB
+
+Audio transcription completed.
+
+Generated transcript:
+Segment 1
+Start: 00:00
+End: 00:04
+Text: Chunking divides large documents into smaller, manageable pieces called chunks.
+
+Segment 2
+Start: 00:04
+End: 00:09
+Text: Common strategies include fixed size, recursive, token-based, and structure-aware chunking.
+
+========== MULTIMODAL DOCUMENTS ==========
+Total documents: 50
+pdf: 37
+image: 1
+video: 10
+video_audio: 2
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 3026.96it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+========== FAISS VECTOR STORE ==========
+Vectors stored: 50
+Embedding dimensions: 384
+
+========== RETRIEVAL RESULTS ==========
+Query: What are the different chunking strategies in RAG?
+
+Rank: 1 | Score: 0.8415 | Modality: video
+Source: rag_chunking_demo.mp4
+Content: A slide titled "What is Chunking in RAG?" lists four chunking strategies: "1. Fixed-Size Chunking", "2. Recursive Chunking", "3. Token-Based Chunking", and "4. Structure-Aware Chunking". Below the list, the text reads: "Choose the right strategy to c
+
+Rank: 2 | Score: 0.6975 | Modality: video
+Source: rag_chunking_demo.mp4
+Content: A video frame with a white background, featuring a presentation slide titled "What is Chunking in RAG?". Below the title, there is a list of four chunking strategies, each with a green numbered circle: "1. Fixed-Size Chunking", "2. Recursive Chunking
+
+Rank: 3 | Score: 0.6492 | Modality: video
+Source: rag_chunking_demo.mp4
+Content: A video frame showing a presentation slide titled "What is Chunking in RAG?" in dark green text at the top center. Below the title, a numbered list from 1 to 4 is displayed vertically, with each number enclosed in a green circle. The list items are:
+
+
+Rank: 4 | Score: 0.6161 | Modality: video
+Source: rag_chunking_demo.mp4
+Content: A screenshot of a presentation slide titled "What is Chunking in RAG?". Below the main heading, there are four white rectangular cards arranged in a 2x2 grid, labeled "Chunk 1", "Chunk 2", "Chunk 3", and "Chunk 4". Each card contains paragraphs of pl
+
+Rank: 5 | Score: 0.5954 | Modality: video
+Source: rag_chunking_demo.mp4
+Content: A video frame showing a presentation slide with the title "What is Chunking in RAG?". Below the title are four rectangular blocks labeled "Chunk 1", "Chunk 2", "Chunk 3", and "Chunk 4", arranged in a 2x2 grid. Each block contains paragraphs of gibber
+
+========== MULTIMODAL CONTEXT ==========
+Text entries: 5
+Original visual files: 5
+
+========== GEMINI VISION ANSWER ==========
+Based on the retrieved video context (`rag_chunking_demo.mp4`), the four different chunking strategies listed in RAG (Retrieval-Augmented Generation) are:
+
+1. **Fixed-Size Chunking**
+2. **Recursive Chunking**
+3. **Token-Based Chunking**
+4. **Structure-Aware Chunking**
+
+*(Source: `rag_chunking_demo.mp4`, timestamp ~7.0–9.0 seconds)*
